@@ -1,0 +1,26 @@
+﻿@model BookShop.Models.Order
+
+<h2>Add Order</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group mb-3">
+        <label>Customer</label>
+        <select asp-for="CustomerId" class="form-control" asp-items="@(new SelectList(ViewData["Customers"] as List<BookShop.Models.Customer>, "CustomerId", "Name"))">
+            <option value="">Select Customer</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Book & Shop</label>
+        <select asp-for="BookInShopId" class="form-control" asp-items="@(new SelectList(ViewData["BookInShops"] as List<BookShop.Models.BookInShop>, "BookInShopId", "Book.Title"))">
+            <option value="">Select Book</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Quantity</label>
+        <input asp-for="Quantity" class="form-control" type="number" min="1" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+</form>

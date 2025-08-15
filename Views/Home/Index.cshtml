@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<div class="text-center mt-4">
+    <h1 class="display-5 text-primary fw-bold">Welcome to BookShop</h1>
+    <p class="lead text-muted">Manage your books, shops, customers, and orders.</p>
+
+    <div class="row mt-4 g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+            <a class="text-decoration-none" asp-controller="Books" asp-action="Index">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Books</h5>
+                        <p class="card-text text-muted">Manage your book catalog</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a class="text-decoration-none" asp-controller="Shops" asp-action="Index">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Shops</h5>
+                        <p class="card-text text-muted">Manage shop locations</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a class="text-decoration-none" asp-controller="Customers" asp-action="Index">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Customers</h5>
+                        <p class="card-text text-muted">View customers</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a class="text-decoration-none" asp-controller="Orders" asp-action="Index">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Orders</h5>
+                        <p class="card-text text-muted">Track orders</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
